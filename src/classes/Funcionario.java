@@ -5,7 +5,9 @@
  */
 package classes;
 
-public class Funcionario {
+import interfaces.Autenticavel;
+
+public class Funcionario implements Autenticavel{
 
     private String nome;
     private Data nascimento;
@@ -52,4 +54,18 @@ public class Funcionario {
     public void setEnd(Endereco end) {
         this.end = end;
     }
+
+    public void mostraDados() {
+
+    }
+
+    void setSenha(String senha) {
+        
+    }
+
+    @Override
+    public void autentica(String senha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

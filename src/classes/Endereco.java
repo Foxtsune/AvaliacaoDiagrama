@@ -7,6 +7,34 @@ package classes;
 
 public class Endereco {
 
-    String rua, bairro;
-    Integer numero;
+    private String rua;
+    private String bairro;
+    private Integer numero;
+
+    public Endereco(String bairro, String rua, Integer numero) {
+        this.rua = rua;
+        this.bairro = bairro;
+        this.numero = numero;
+    }
+
+    /**
+     * @return the rua
+     */
+    public String getRua() {
+        return rua;
+    }
+
+    /**
+     * @return the bairro
+     */
+    public String getBairro() {
+        return bairro;
+    }
+
+    /**
+     * @return the numero
+     */
+    public Integer getNumero() {
+        return numero;
+    }
 }

@@ -5,14 +5,26 @@
  */
 package classes;
 
+import interfaces.Autenticavel;
 import interfaces.Utilitario;
 
-public class Engenheiro extends Funcionario implements Utilitario {
+public class Gerente extends Funcionario implements Autenticavel, Utilitario {
 
-    public Engenheiro(String nome, Data nasc, Endereco end) {
+    private String senha;
+
+    public Gerente(String nome, Data nasc, Endereco end) {
         setNome(nome);
         setNascimento(nasc);
         setEnd(end);
+    }
+
+    @Override
+    public void autentica(String senha) {
+        if (senha.equals(this.senha)) {
+            System.out.println("Login realizado com sucesso");
+        } else {
+            System.out.println("Senha invalida");
+        }
     }
 
     @Override
@@ -22,6 +34,10 @@ public class Engenheiro extends Funcionario implements Utilitario {
         System.out.println("Nome: " + getNome());
         System.out.println("Data: " + getNascimento().getDia() + "/" + getNascimento().getMes() + "/" + getNascimento().getAno());
         System.out.printf("Endereco: %s %s %d\n\n", getEnd().getBairro(), getEnd().getRua(), getEnd().getNumero());
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
 }
