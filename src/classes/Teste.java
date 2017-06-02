@@ -18,7 +18,7 @@ public class Teste {
         Endereco dend = new Endereco("jardim", "centro", 10);
         Funcionario dir = new Diretor("santos", dnasc, dend);
         dir.mostraDados();
-        dir.setSenha("a");
+        dir.setSenha("b");
         SistemaInterno ds = new SistemaInterno();
         ds.login(dir, "a");
         //Gerente

@@ -18,13 +18,18 @@ public class Diretor extends Funcionario implements Autenticavel, Utilitario {
 
     private String senha;
 
+ 
     @Override
-    public void autentica(String senha) {
+    public void autentica(String senha) throws Exception{
         if (senha.equals(this.senha)) {
             System.out.println("Login realizado com sucesso");
         } else {
-            System.out.println("Senha invalida");
+            throw new Exception("Login Invalido");
+            
         }
+        if(0==0){
+                throw new NullPointerException("aaaa");
+                }
     }
 
     @Override

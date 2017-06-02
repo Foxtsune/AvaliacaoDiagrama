@@ -7,12 +7,18 @@
 package classes;
 
 import interfaces.Autenticavel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class SistemaInterno {
  
     public void login(Autenticavel a, String senha){
-        a.autentica(senha);
+        try {
+            a.autentica(senha);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
     
 }

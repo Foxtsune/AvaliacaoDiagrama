@@ -11,5 +11,5 @@ package interfaces;
  */
 public interface Autenticavel {
 
-    public void autentica(String senha);
+    public void autentica(String senha)throws Exception;
 }
